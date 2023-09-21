@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Register </title>
+<link rel="stylesheet" type="text/css" href="1.css">
+</head>
+<body>
+<div class = "e">
+<center>
+<h1> LOGIN PAGE </h1>
+<label> USER NAME:</label>
+<input type="text" name="fnname" id="name"> <br> <br>
+<label> PASSWORD:</label>
+<input type="text" name="pname" id="pass">
+<br>
+<br>
+<button name="button" type="button" id="login">LOGIN</button>
+<h1 id='r'></h1>
+</center>
+</div>
+<script type="text/javascript">
+alert("WELCOME TO OUR LOGIN PAGE$#")
+let names=prompt("ENTER THE USER NAME")
+let hello=prompt("ENTER THE PASSWORD")
+let name=names.split(",")
+let pass=hello.split(",")
+function login()
+{
+let a=document.getElementByID('name').value
+let b=document.getElementById('pass').value
+let result=document.getElementById('r')
+let f=0;
+for(let i=0;i<name.length;i++)
+{
+if(a==name[i])
+{
+f=1;
+break;
+}
+}
+if(f==1)
+{
+result.innerHTML = "login successful"
+}
+else
+{
+result.innerHTML = "login faild"
+
+}
+}
+</script>
+</body>
+</html>
